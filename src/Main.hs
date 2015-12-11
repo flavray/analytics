@@ -1,5 +1,9 @@
 module Main where
 
+import Network.Wai.Handler.Warp
+
+import API (app)
+
 main :: IO ()
 main = do
-  putStrLn "hello world"
+  run 3000 app
